@@ -21,6 +21,88 @@ namespace MyTests
         }
 
         [Test]
+        public void CheckDiscontForTen()
+        {
+            //arrange
+            var shopClass = new ShopClass(5, 10);
+            //act
+            var actual = shopClass.CreateDiscount();
+            var expected = 0.5;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void CheckDiscontForTwentyNine()
+        {
+            //arrange
+            var shopClass = new ShopClass(5, 29);
+            //act
+            var actual = shopClass.CreateDiscount();
+            var expected = 0.5;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void CheckDiscontForThirty()
+        {
+            //arrange
+            var shopClass = new ShopClass(3, 30);
+            //act
+            var actual = shopClass.CreateDiscount();
+            var expected = 5.45;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void CheckDiscontForFortyNine()
+        {
+            //arrange
+            var shopClass = new ShopClass(3, 49);
+            //act
+            var actual = shopClass.CreateDiscount();
+            var expected = 5.45;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void CheckDiscontForFifty()
+        {
+            //arrange
+            var shopClass = new ShopClass(3, 50);
+            //act
+            var actual = shopClass.CreateDiscount();
+            var expected = 10.6;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void CheckDiscontForNinetyNine()
+        {
+            //arrange
+            var shopClass = new ShopClass(3, 99);
+            //act
+            var actual = shopClass.CreateDiscount();
+            var expected = 10.6;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void CheckDiscontForNegativeQuantity()
+        {
+            //arrange
+            var shopClass = new ShopClass(-9, 3);
+            //act assert
+            Assert.Throws<Exception>(() => shopClass.CreateDiscount());
+        }
+
+
+        [Test]
         public void CheckDiscontForNegativePrice()
         {
             //arrange

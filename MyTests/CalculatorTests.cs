@@ -86,7 +86,7 @@ namespace MyTests
         }
 
         [Test]
-        public void SubsructNegativeAndPositiveNumbers()
+        public void SubstructNegativeAndPositiveNumbers()
         {
             //odejmowanie ujemnej i dodatniej liczby
             //arrange
@@ -204,12 +204,12 @@ namespace MyTests
         }
 
         [Test]
-        public void DivideNegativeAndPositiveNUmbers()
+        public void DividedPositiveAndNegativeNumbers()
         {
             //arrange
             var calculator = new Calculator();
             //act
-            var actual = calculator.Divide(-210, 30);
+            var actual = calculator.Divide(210, -30);
             var expected = -7;
             //assert
             Assert.AreEqual(expected, actual);

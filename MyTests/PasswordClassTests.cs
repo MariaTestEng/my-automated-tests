@@ -23,6 +23,49 @@ namespace MyTests
         }
 
         [Test]
+        public void CheckPasswordWithoutSpecjalCharacters()
+        {
+            //arrange
+            var password = new PasswordClass()
+            {
+                MyPassword = "Majkaeb1"
+            };
+            //act
+            var actual = password.CheckPassword();
+            //assert
+            Assert.IsFalse(actual);
+        }
+
+
+        [Test]
+        public void CheckPasswordTooShort()
+        {
+            //arrange
+            var password = new PasswordClass()
+            {
+                MyPassword = "Majka1@"
+            };
+            //act
+            var actual = password.CheckPassword();
+            //assert
+            Assert.IsFalse(actual);
+        }
+
+        [Test]
+        public void CheckPasswordSmallLetters()
+        {
+            //arrange
+            var password = new PasswordClass()
+            {
+                MyPassword = "majkaeb@"
+            };
+            //act
+            var actual = password.CheckPassword();
+            //assert
+            Assert.IsFalse(actual);
+        }
+
+        [Test]
         public void CheckPasswordWithoutNumber()
         {
             //arrange

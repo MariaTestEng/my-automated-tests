@@ -1,0 +1,6 @@
+Aplikacja realizuje funkcjonalność sprawdzania dzielników liczby całkowitej wg następujących zasad;
+- dla liczby podzielnej przez 3 i 5 zwraca wynik w postaci tesktowej "FizzBuzz"
+- dla liczby podzielnej przez 3 zwraca wynik w postaci tesktowej "Fizz"
+- dla liczby podzielnej przez 5 zwraca wynik w postaci tesktowej "Buzz"
+- dla liczby niepodzielnej przez 3 i 5 zwraca ogólny wyjątek
+Wszytskie metody są bezparametrowe, parametr jest pobierany z właściwości klasy - Number który należy uzupełnić przed wywołaniem metody.
