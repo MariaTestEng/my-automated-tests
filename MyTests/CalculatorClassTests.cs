@@ -244,7 +244,7 @@ namespace MyTests
             };
             //act
             var actual = calculator.Divide();
-            var expected = -6;
+            var expected = -5;
             //assert
             Assert.AreEqual(expected, actual);
         }
