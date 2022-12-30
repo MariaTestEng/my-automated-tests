@@ -9,6 +9,13 @@ namespace MyTests
     internal class CalculatorClassTests
     {
         [Test]
+        public void CheckCreateCalculator()
+        {
+            var calculator=new CalculatorClass();
+            //Assert
+            Assert.IsInstanceOf<CalculatorClass>(calculator);
+        }
+        [Test]
         public void AddTwoPositiveNumbers()
             //dodac dwie pozytywne liczby
         {

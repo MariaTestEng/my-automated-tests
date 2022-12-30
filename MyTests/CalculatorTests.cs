@@ -13,6 +13,8 @@ namespace MyTests
         public void Setup()
         {
             calculator = new Calculator();
+            //Assert
+            Assert.IsInstanceOf<Calculator>(calculator);
         }
 
         [Test]
